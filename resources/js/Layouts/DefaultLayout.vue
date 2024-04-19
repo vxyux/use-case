@@ -124,7 +124,7 @@ const showingNavigationDropdown = ref(false);
                   </ul>
                 </div>
               </div>
-              <div class="flex-grow-0 items-end align-bottom">
+              <div class="flex-grow-0 items-end align-bottom mb-10">
                 <h1 class="text-xl font-semibold">
                   A non-existing tech resell company under the name:
                 </h1>

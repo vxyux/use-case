@@ -29,6 +29,7 @@ const submit = () => {
 };
 </script>
 
+
 <template>
   <DefaultLayout>
     <div class="p-2">
@@ -39,9 +40,12 @@ const submit = () => {
 
             <h1 class="mb-10 text-4xl font-semibold">Login</h1>
 
-            <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-              {{ status }}
-            </div>
+              <div class="rounded-2xl bg-red-200 mb-6">
+                  <div v-if="status" class="p-2 font-medium text-sm text-red-600">
+                      {{ status }}
+                  </div>
+              </div>
+
 
             <form @submit.prevent="submit">
               <div>
