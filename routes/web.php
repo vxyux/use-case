@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,9 +23,11 @@ Route::get('/pricing', function () {
     return Inertia::render('Pricing/Index');
 })->name('pricing');
 
-Route::get('/products', function () {
-    return Inertia::render('Products/Index');
-})->name('products');
+Route::get('/products', [ProductController::class, 'index'])->name('product.index');
+
+// Route::get('/products', function () {
+//     return Inertia::render('Products/Index');
+// })->name('products');
 
 Route::get('/blog', function () {
     return Inertia::render('Blog/Index');

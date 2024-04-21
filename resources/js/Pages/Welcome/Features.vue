@@ -18,7 +18,7 @@
             </Card>
             <Card title="Save up Coins for rewards">
               <div class="flex pt-2 relative">
-                <subcard
+                <div
                   class="overflow-hidden w-screen p-6 bg-black text-white border-2 rounded-2xl shadow"
                 >
                   <p class="font-semibold text-left">September</p>
@@ -45,7 +45,7 @@
                       </svg>
                     </div>
                   </div>
-                </subcard>
+                </div>
               </div>
               <img
                 class="absolute bottom-10 drop-shadow left-24 justify-center h-44"
