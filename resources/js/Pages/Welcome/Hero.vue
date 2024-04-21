@@ -1,7 +1,7 @@
 <template>
   <div class="p-2 mb-10">
     <section
-      class="pt-24 rounded-2xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#6eba95] via-[#b8e8d1] to-[#fcfcfc]"
+      class="py-24 rounded-2xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#6eba95] via-[#b8e8d1] to-[#fcfcfc]"
     >
       <div class="px-12 mx-auto max-w-7xl">
         <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">

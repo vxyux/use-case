@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section>
+    <section class="mb-10">
       <figure class="max-w-screen-md mx-auto text-center">
         <svg
           class="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
@@ -14,7 +14,7 @@
           />
         </svg>
         <blockquote>
-          <p class="text-2xl italic font-medium text-gray-900 dark:text-white">
+          <p class="text-2xl italic font-medium text-gray-900">
             "Choosing useCase for my tech needs was a game-changer! Their seamless
             shopping experience, combined with lightning-fast delivery, left me beyond
             impressed. Thanks for the excellent service!"
@@ -31,10 +31,10 @@
           <div
             class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700"
           >
-            <cite class="pe-3 font-medium text-gray-900 dark:text-white"
+            <cite class="pe-3 font-medium text-gray-900"
               >Devin Johnson</cite
             >
-            <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400"
+            <cite class="ps-3 text-sm text-gray-500"
               >Software Engineer at Apple</cite
             >
           </div>

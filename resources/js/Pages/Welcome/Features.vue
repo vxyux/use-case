@@ -1,6 +1,6 @@
 <template>
   <div class="p-2">
-    <section class="pt-24 rounded-2xl bg-white">
+    <section class="pt-24 pb-24 rounded-2xl bg-white">
       <div class="px-12 mx-auto max-w-7xl">
         <div class="w-full mx-auto text-left md:w-10/12 md:text-center min-h-[35rem]">
           <Heading
@@ -19,7 +19,7 @@
             <Card title="Save up Coins for rewards">
               <div class="flex pt-2 relative">
                 <subcard
-                  class="overflow-hidden w-screen p-6 bg-black text-white border-2 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                  class="overflow-hidden w-screen p-6 bg-black text-white border-2 rounded-2xl shadow"
                 >
                   <p class="font-semibold text-left">September</p>
                   <div class="flex flex-row justify-between">

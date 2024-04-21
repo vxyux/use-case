@@ -1,7 +1,7 @@
 <template>
   <div class="p-2">
     <section
-      class="pt-12 rounded-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#E44B40] via-[#F5C0BA] to-[#FFFBF7]"
+      class="pt-24 pb-24 rounded-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#E44B40] via-[#F5C0BA] to-[#FFFBF7]"
     >
       <div class="px-12 mx-auto max-w-7xl">
         <div
@@ -32,7 +32,7 @@
             </div>
           </div>
         </div>
-        <div class="mx-auto text-center mb-6">
+        <div class="mx-auto text-center">
           <PrimaryButton
             href="/pricing"
             class="bg-red-400 hover:bg-red-500 rounded-2xl flex-col sm:w-[24rem]"
