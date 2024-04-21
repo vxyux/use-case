@@ -10,7 +10,7 @@
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
         <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
           <div class="grid grid-cols-3 gap-4">
-            <Product
+            <ProductCard
               v-for="product in products"
               :src="'/placeholders/' + product['image']"
               :name="product['title']"
@@ -19,7 +19,7 @@
               :id="product['id']"
               :rating="product.avg_rating[0]['aggregate']"
             >
-            </Product>
+            </ProductCard>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 import DefaultLayout from "@/Layouts/DefaultLayout.vue";
-import Product from "./Product.vue";
+import ProductCard from "./ProductCard.vue";
 import { Head } from "@inertiajs/vue3";
 
 interface Product {

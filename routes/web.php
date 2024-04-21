@@ -23,7 +23,7 @@ Route::get('/pricing', function () {
     return Inertia::render('Pricing/Index');
 })->name('pricing');
 
-Route::get('/products', [ProductController::class, 'index'])->name('product.index');
+Route::resource('products', ProductController::class);
 
 // Route::get('/products', function () {
 //     return Inertia::render('Products/Index');

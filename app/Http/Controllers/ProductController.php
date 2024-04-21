@@ -43,7 +43,11 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::with('category', 'avgRating')->where('id', $id)->first();
+
+        return Inertia::render('Products/Show', [
+            'product' => $product,
+        ]);
     }
 
     /**
