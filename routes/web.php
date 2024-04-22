@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,10 @@ Route::get('/pricing', function () {
 })->name('pricing');
 
 Route::resource('products', ProductController::class);
+
+Route::post('/cart', function () {
+    return Inertia::render('Pricing/Index');
+});
 
 // Route::get('/products', function () {
 //     return Inertia::render('Products/Index');

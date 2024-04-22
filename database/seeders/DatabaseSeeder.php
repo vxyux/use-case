@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'jacky@usecase.com',
             'role' => 1
         ]);
-
+  
         foreach($categories as $category) {
             Category::factory()->create([
                 'title' => $category

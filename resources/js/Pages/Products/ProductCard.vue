@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="w-full my-4 max-w-sm bg-slate-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
+  <div class="w-full max-w-sm bg-slate-100 border border-gray-200 rounded-lg shadow">
     <a :href="route('products.show', props.id)">
       <img class="block h-52 w-auto m-auto mb-4" :src="props.src" alt="Product image" />
     </a>
@@ -34,10 +32,8 @@
           >{{ props.rating }}</span
         >
       </div>
-      <div class="flex items-center justify-between">
-        <span class="text-3xl font-bold text-gray-900 dark:text-white"
-          >€{{ props.price }}</span
-        >
+      <div class="flex flex-col items-center lg:flex-row justify-between">
+        <span class="text-3xl font-bold text-gray-900">€{{ props.price }}</span>
         <a
           :href="'/product/' + props.id"
           class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"

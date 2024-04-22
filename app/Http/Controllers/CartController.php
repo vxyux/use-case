@@ -2,24 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 
-class ProductController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $products = Product::with('category', 'avgRating')->get();
-
-        //dd($products->first()->avgRating[0]['aggregate']);
-
-        return Inertia::render('Products/Index', [
-            'products' => $products,
-        ]);
+        //
     }
 
     /**
@@ -33,7 +25,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(string $id)
     {
         //
     }
@@ -43,13 +35,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::with('category', 'avgRating')->where('id', $id)->first();
-
-        return Inertia::render('Products/Show', [
-            'product' => $product,
-            'rating' => $product->avgRating[0]['aggregate'],
-            'reviews' => $product->reviews
-        ]);
+        //
     }
 
     /**
