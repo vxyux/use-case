@@ -29,23 +29,21 @@ const submit = () => {
 };
 </script>
 
-
 <template>
   <DefaultLayout>
     <div class="p-2">
-      <section class="pt-24 rounded-2xl bg-white">
+      <section class="pt-24 rounded-2xl bg-white text-black">
         <div class="px-12 mx-auto max-w-7xl">
           <div class="w-full mx-auto text-left md:w-10/12 min-h-[35rem]">
             <Head title="Log in" />
 
             <h1 class="mb-10 text-4xl font-semibold">Login</h1>
 
-              <div class="rounded-2xl bg-red-200 mb-6">
-                  <div v-if="status" class="p-2 font-medium text-sm text-red-600">
-                      {{ status }}
-                  </div>
+            <div class="rounded-2xl bg-red-200 mb-6">
+              <div v-if="status" class="p-2 font-medium text-sm text-red-600">
+                {{ status }}
               </div>
-
+            </div>
 
             <form @submit.prevent="submit">
               <div>

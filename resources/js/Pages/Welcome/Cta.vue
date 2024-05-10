@@ -12,7 +12,7 @@
             description="get notified, express shippping and much more with useCase Pro."
           />
           <div
-            class="flex items-center justify-center relative h-4 drop-shadow-2xl mt-1"
+            class="flex items-center justify-center relative h-4 drop-shadow-2xl mt-1 text-black"
             v-for="item in items"
             :key="item.id"
           >

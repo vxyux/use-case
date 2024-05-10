@@ -46,7 +46,7 @@
                 Price includes VAT (€{{ priceVat }})
               </h4>
               <Option />
-              <form @submit="formSubmit">
+              <form @submit.prevent="submit">
                 <PrimaryButton class="bg-green-400 hover:bg-green-500 text-black">
                   Add to cart
                   <svg
@@ -108,10 +108,11 @@ import DefaultLayout from "@/Layouts/DefaultLayout.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import { Head } from "@inertiajs/vue3";
 import { computed } from "vue";
-import axios from "axios";
+import { useForm, Link } from "@inertiajs/vue3";
 import Option from "./Option.vue";
 
 interface Product {
+  id: number;
   title: string;
   price: string;
   stock: number;
@@ -143,10 +144,12 @@ const priceVat = computed(() => {
   return Math.round(Number(price) * 0.21).toFixed(2);
 });
 
-const formSubmit = () => {
-  axios.post("/cart", {
-    name: props.product.price,
-  });
+const form = useForm({
+  id: props.product.id,
+});
+
+const submit = () => {
+  form.post("/cart");
 };
 </script>
 

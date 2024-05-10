@@ -2,29 +2,31 @@
   <div class="p-2">
     <section class="pt-24 pb-24 rounded-2xl bg-white">
       <div class="px-12 mx-auto max-w-7xl">
-        <div class="w-full mx-auto text-left md:w-10/12 md:text-center min-h-[35rem]">
+        <div class="w-full mx-auto md:w-10/12 md:text-center min-h-[35rem]">
           <Heading
             title="Our special features"
             description="that shine us through greatness."
           />
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-2 items-center">
             <Card title="AI-powered suggestions"> </Card>
             <Card title="Delivery at lightspeed"> </Card>
+
             <Card title="Access to the internet's hottest sh*t">
               <div class="px-auto relative">
                 <img class="z-10 w-56 relative left-16" :src="'/images/rabbit-r1.png'" />
                 <img class="absolute top-[-20px]" :src="'/images/fire.png'" />
               </div>
             </Card>
+
             <Card title="Save up Coins for rewards">
-              <div class="flex pt-2 relative">
+              <div class="flex pt-2">
                 <div
-                  class="overflow-hidden w-screen p-6 bg-black text-white border-2 rounded-2xl shadow"
+                  class="overflow-hidden w-[100%] p-6 bg-black text-white border-2 rounded-2xl shadow"
                 >
                   <p class="font-semibold text-left">September</p>
-                  <div class="flex flex-row justify-between">
+                  <div class="flex flex-row">
                     <h1 class="text-3xl font-black text-left">6.900x</h1>
-                    <div class="flex flex-row text-green-400">
+                    <div class="flex flex-row ml-auto text-green-400">
                       <h1 class="text-3xl font-black text-right">5%</h1>
                       <svg
                         width="30px"

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class CartController extends Controller
 {
@@ -11,7 +12,11 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $cart = session()->get('cart');
+
+        return Inertia::render('Cart/Index', [
+            'cart' => $cart
+        ]);
     }
 
     /**
@@ -25,9 +30,35 @@ class CartController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(string $id)
+    public function store(Request $request)
     {
-        //
+
+        // creating a new cart if there's no running session
+        if (!session()->has('cart')) {
+            $new_cart = [];
+            session(['cart' => $new_cart]);
+        }
+
+        // utilize a global function to search for a specific value, returning the key
+        $hit = searchForId($request->id, session('cart'));
+
+        // if the product_id is found in the session array
+        if(isset($hit)) {
+            $cart = session('cart');
+            $cart[$hit]['amount'] = $cart[$hit]['amount'] + 1;
+            session(['cart' => $cart]);
+        }
+        else {
+            $new_item = [
+                'product_id' => $request['id'],
+                'amount' => 1,
+            ];
+            session()->push('cart', $new_item);
+        }
+
+        $session = session('cart');
+
+        return redirect()->route('cart.index');
     }
 
     /**

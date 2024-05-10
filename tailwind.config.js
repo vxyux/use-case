@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         sans: ['Figtree', ...defaultTheme.fontFamily.sans],
       },
+      listStyleImage: {
+        checkmark: 'url("/img/checkmark.png")',
+      },
     },
   },
 

@@ -4,25 +4,27 @@
       class="py-24 rounded-2xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#6eba95] via-[#b8e8d1] to-[#fcfcfc]"
     >
       <div class="px-12 mx-auto max-w-7xl">
-        <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+        <div class="w-full mx-auto text-center md:w-11/12 xl:w-9/12">
           <h1
-            class="uppercase drop-shadow-xl mb-8 text-4xl font-black leading-none tracking-normal text-gray-50 md:text-6xl md:tracking-tight"
+            class="uppercase drop-shadow-xl mb-8 text-4xl sm:text-5xl font-black leading-none tracking-normal text-gray-50 md:text-6xl md:tracking-tight"
           >
-            <span>Find every</span>
-            <span
-              class="block italic w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-black lg:inline"
-            >
-              useCase
-            </span>
-            <span>with the latest tech</span>
+            The 1 platform for all your
+            <span class="italic underline">tech needs</span>
           </h1>
-          <p class="px-16 mb-8 text-lg text-white md:text-xl lg:px-24">
+          <h2
+            class="hidden md:block px-16 mb-8 text-md font-medium text-white md:text-xl lg:px-24"
+          >
             Find the latest in technology at prices that won't break the bank. Explore our
-            collection and stay ahead of the curve without emptying your wallet!
-          </p>
+            collection and stay up to date without emptying your wallet!
+          </h2>
+          <h2
+            class="block md:hidden px-16 mb-8 text-md font-medium text-white md:text-xl lg:px-24"
+          >
+            Find the latest in technology at prices that won't break the bank.
+          </h2>
           <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
             <PrimaryButton href="/about" class="bg-green-400 hover:bg-green-500">
-              Get Started
+              <span class="text-sm lg:text-lg">Get started</span>
               <svg
                 class="w-4 h-4 ml-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +39,7 @@
               </svg>
             </PrimaryButton>
             <SecondaryButton href="/about">
-              Learn More
+              <span class="text-sm lg:text-lg">Learn More</span>
               <svg
                 class="w-4 h-4 ml-1"
                 fill="none"

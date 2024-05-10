@@ -6,9 +6,12 @@ use App\Http\Controllers\CartController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Category;
 
 Route::get('/', function () {
+    $categories = Category::all();
     return Inertia::render('Welcome', [
+        'categories' => $categories,
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
@@ -24,11 +27,9 @@ Route::get('/pricing', function () {
     return Inertia::render('Pricing/Index');
 })->name('pricing');
 
+Route::get('/products/category/{id}', [ProductController::class, 'filter'])->name('products.filter');
 Route::resource('products', ProductController::class);
-
-Route::post('/cart', function () {
-    return Inertia::render('Pricing/Index');
-});
+Route::resource('cart', CartController::class);
 
 // Route::get('/products', function () {
 //     return Inertia::render('Products/Index');

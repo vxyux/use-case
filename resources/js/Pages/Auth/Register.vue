@@ -28,7 +28,7 @@ const submit = () => {
           <div class="w-full mx-auto text-left md:w-10/12 min-h-[35rem]">
             <Head title="Register" />
 
-            <h1 class="mb-10 text-4xl font-semibold">Register</h1>
+            <h1 class="mb-10 text-4xl text-black font-semibold">Register</h1>
 
             <form @submit.prevent="submit">
               <div>
