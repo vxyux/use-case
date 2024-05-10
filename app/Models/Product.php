@@ -38,6 +38,17 @@ class Product extends Model
     {
         return $this->reviews()
           ->selectRaw('round(avg(rating),1) as aggregate, product_id')
-          ->groupBy('product_id');
+          ->groupBy('product_id')
+          ->take(1);
+    }
+
+    public function getAvgRating() {
+        if ( ! array_key_exists('avgRating', $this->relations)) {
+            $this->load('avgRating');
+        }
+
+        $relation = $this->getRelation('avgRating')->first();
+
+        return ($relation) ? $relation->aggregate : null;
     }
 }

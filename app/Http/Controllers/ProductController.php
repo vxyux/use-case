@@ -22,6 +22,18 @@ class ProductController extends Controller
         ]);
     }
 
+    public function filter(Request $request) 
+    {
+        $products = Product::with('category', 'avgRating')->where('category_id', $request->id)->get();
+
+        $category = isset($products[0]->category['title']) ? $products[0]->category['title'] : null;
+
+        return Inertia::render('Products/Index', [
+            'category' => $category,
+            'products' => $products,
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -43,7 +55,13 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::with('category', 'avgRating')->where('id', $id)->first();
+
+        return Inertia::render('Products/Show', [
+            'product' => $product,
+            'rating' => $product->avgRating[0]['aggregate'],
+            'reviews' => $product->reviews
+        ]);
     }
 
     /**
